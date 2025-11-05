@@ -1,0 +1,15 @@
+Create a linguistic-analysis tool that:
+1. Measures sentence length and flags those exceeding or falling belowa definedthreshold.
+2. Calculates complexity using syntactic parsing and clause counting. Suggests simplified versions for overly complex or verbose sentences. Additionally, check punctuation consistency and correctness within the document.
+
+
+Label	Meaning	                                Example
+advcl	Adverbial clause	                    “When she arrived, he left.”
+ccomp	Clausal complement (object clause)	    “I know that he’s coming.”
+xcomp	Open clausal complement (no subject)	“I want to eat pizza.”
+relcl	Relative clause	                        “The man who came yesterday is here.”
+csubj	Clausal subject	                        “What he said is true.”
+
+To find number of clauses: 
+Count tokens whose dep_ is in {"ROOT", "advcl", "ccomp", "xcomp", "relcl", "csubj"}
+That’s exactly the set of dependency relations representing clause heads (i.e., main or subordinate clauses)
