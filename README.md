@@ -1,93 +1,116 @@
-# NLP Sentence Analysis
-A Jupyter‐Notebook based exploratory project analysing sentences using NLP techniques.
+# NLP_sentence_analysis
 
-## 🧠 Overview
-This project performs sentence‐level analysis on a given corpus of sentences (see `Sentences.csv`). It uses Python (in Jupyter notebooks) to explore, visualise, and extract insights from the text.  
-It’s ideal for:
-- Learning or demonstrating basic NLP workflows (tokenisation, POS, simple statistics).
-- Rapid prototyping of sentence‐analysis pipelines.
-- Educational or proof‐of‐concept usage.
+A Jupyter-Notebook‐based project for analyzing sentences using Natural Language Processing (NLP) techniques.
 
-## 📁 Repository Structure
-```
-/ (root)
-│   .gitignore
-│   INFO.txt
-│   Sentences.csv             ← the main input dataset (sentences)
-│   srs.csv                   ← secondary dataset / SRS annotations
-│   srsCorpus.csv             ← corpus derived from SRS dataset
-│
-├── Main.ipynb                ← primary notebook: load data, analyse, visualise
-├── TESTING.ipynb             ← notebook for experiments, tests, prototyping
-└── SRS/                      ← folder containing “SRS” documentation or assets
-    └── … 
-```
+## 📋 Table of Contents
 
-## ✅ Features
-- Load a sentence dataset and perform cleaning/pre‐processing.
-- Exploratory data analysis (EDA): sentence length distributions, token counts, maybe POS tag counts.
-- Visualisations embedded within Jupyter (histograms, bar charts etc).
-- Modular notebook design: main pipeline + testing/experimentation notebook.
-- Simple, clear structure so newcomers can follow and extend.
+* [Project Overview](#project-overview)
+* [Features](#features)
+* [Getting Started](#getting-started)
 
-## 🚀 Getting Started
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Running the notebooks](#running-the-notebooks)
+* [Directory Structure](#directory-structure)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+
+## Project Overview
+
+This project demonstrates sentence-level analysis using NLP. It includes:
+
+* A dataset of sentences (`Sentences.csv`) to analyze.
+* Jupyter notebooks (`Main.ipynb`, `TESTING.ipynb`) which perform different experiments/analyses on the sentence dataset.
+* Supporting files (such as `srs.csv`, `srsCorpus.csv`) and a system requirements specification folder (`SRS`).
+* A goal of exploring how sentences can be processed, tokenized, maybe tagged, classified or otherwise examined using NLP tools and techniques.
+
+## Features
+
+* Loading and exploring sentence data.
+* Preprocessing steps (tokenization, cleaning, etc).
+* (Potentially) tagging, classification, or other sentence-level NLP operations.
+* Interactive notebook format makes it easy to follow, experiment and iterate.
+* Dataset and code are contained so you can reproduce or extend the analysis.
+
+## Getting Started
+
 ### Prerequisites
-- Python 3.x installed
-- Jupyter Notebook (or JupyterLab)
-- Common NLP/data libraries (you can install via `pip`):
-  ```bash
-  pip install pandas numpy matplotlib seaborn nltk spacy
-  ```
 
-### Setup
-1. Clone the repository:
+Ensure you have installed:
+
+* Python (3.x)
+* Jupyter Notebook / JupyterLab
+* Common NLP libraries such as `nltk`, `spacy`, `pandas`, `numpy` (or whichever your notebooks use).
+
+You may install via `pip`, for example:
+
+```bash
+pip install pandas numpy nltk spacy  
+```
+
+### Installation
+
+Clone this repository:
+
+```bash
+git clone https://github.com/anagh555i/NLP_sentence_analysis.git  
+cd NLP_sentence_analysis  
+```
+
+### Running the notebooks
+
+1. Launch Jupyter Notebook / Lab:
+
    ```bash
-   git clone https://github.com/anagh555i/NLP_sentence_analysis.git
-   cd NLP_sentence_analysis
+   jupyter notebook  
    ```
-2. (Optional) Create a virtual environment:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate   # on Windows: venv\Scripts\activate
-   ```
-3. Install dependencies (see above).
-4. Launch Jupyter Notebook:
-   ```bash
-   jupyter notebook
-   ```
-   then open `Main.ipynb` and run the cells.
+2. Open `Main.ipynb` to view the main analysis workflow.
+3. Explore `TESTING.ipynb` for supplementary experiments or tests.
+4. Use `Sentences.csv`, `srs.csv`, `srsCorpus.csv` as input datasets.
+5. Modify or extend the notebooks for your own sentence dataset or NLP experiments.
 
-### Usage
-- In `Main.ipynb`, cells walk you through: loading the CSV (`Sentences.csv`), inspecting the data, pre‑processing (tokenisation, cleaning), generating basic statistics, visualising distributions.
-- In `TESTING.ipynb`, you can explore further ideas or test modifications (e.g., different tokenisers, POS tagging, named entities).
-- Extend the project by adding new analyses (e.g., sentiment, clustering, topic modelling) or by applying to your own sentence corpus.
+## Directory Structure
 
-## 📐 Customisation & Extending
-- Replace `Sentences.csv` with your own dataset of sentences (ensure similar format).
-- Add new notebook(s) for advanced NLP tasks (e.g., using the spaCy library, word embeddings, transformer models).
-- Modularise code (e.g., move common functions into `.py` modules) for reuse.
-- Allow interactive dashboards (e.g., using Streamlit or Dash) on top of the analysis.
+```
+/  
+├─ .ipynb_checkpoints/  
+├─ SRS/              ← system requirements/specifications folder  
+├─ XMLZIPFile/       ← (if used) zipped xml files folder  
+├─ .gitignore  
+├─ INFO.txt  
+├─ Main.ipynb  
+├─ TESTING.ipynb  
+├─ Sentences.csv  
+├─ srs.csv  
+├─ srsCorpus.csv  
+```
 
-## 🔍 Insights & Findings
-*(You can fill this section after you’ve run the analysis—mention interesting patterns you found, e.g., “Average sentence length is 12 words”, “Most common POS tag: noun”, etc.)*
+## Usage
 
-## 🎓 Use Cases
-- Academic/learning: Understand how sentence‐level NLP workflows work.
-- Prototype for larger projects: Use as a starting point for text analytics.
-- Data journalism: Quick snapshot of sentence characteristics in a dataset.
+* Load and inspect your sentence dataset (for example `Sentences.csv`).
+* Perform preprocessing (tokenization, cleaning, stop-words removal, etc).
+* Conduct sentence-level analysis: e.g., tagging POS, sentiment, syntactic parsing, classification, clustering of sentences, etc.
+* Visualise or summarise findings in notebook cells.
+* You can adapt the notebook to new datasets by replacing the CSV files or adding new steps.
 
-## 🤝 Contributing
+## Contributing
+
+Contributions are welcome!
 If you’d like to contribute:
-1. Fork the repo.
-2. Create a branch: `git checkout -b feature/your‐feature`.
-3. Make your changes, test them, commit.
-4. Open a Pull Request describing your addition/improvement.
-5. Ensure you update this README if you add major functionality.
 
-## 📜 Licence
-*(If you haven’t selected a licence yet, you might choose one – e.g., MIT License. Then mention it here.)*
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/MyFeature`).
+3. Make your changes and test locally.
+4. Submit a pull request.
+5. Please ensure code is well-documented and relevant notebook cells are clear.
 
----
+## License
 
-**Author**: Anagh  
-**Repository**: https://github.com/anagh555i/NLP_sentence_analysis
+This project is currently un-licensed. Consider adding a LICENSE file (e.g., MIT, Apache 2.0) if you wish to permit reuse.
+
+## Contact
+
+Created by [anagh555i](https://github.com/anagh555i).
+For questions or suggestions, please open an issue or contact me via GitHub.
